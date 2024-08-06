@@ -19,7 +19,7 @@ def main():
                 print(num, end=" ")
             print()
     except ValueError:
-        print("Invalid input. Please enter an integer.")
+        print("Invalid input, please enter an integer.")
 
 if __name__ == "__main__":
     main()
