@@ -7,7 +7,7 @@ def fibonacci(n):
     return sequence
 
 def main():
-    print("Fibonacci Sequence Generator")
+    print("Hello!")
     try:
         terms = int(input("Enter the number of terms: "))
         if terms <= 0:
