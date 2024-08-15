@@ -1,17 +1,18 @@
 import logging
-from datetime import datetime
+import datetime
+import sys
 from pythonjsonlogger import jsonlogger
 
 
 logger = logging.getLogger()
-logHandler = logging.StreamHandler()
+logHandler = logging.StreamHandler(sys.stdout)
 
 
 class CustomJsonFormatter(jsonlogger.JsonFormatter):
     def add_fields(self, log_record, record, message_dict):
         super(CustomJsonFormatter, self).add_fields(log_record, record, message_dict)
         if not log_record.get('timestamp'):
-            now = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+            now = datetime.datetime.now(datetime.UTC)
             log_record['timestamp'] = now
         if log_record.get('level'):
             log_record['level'] = log_record['level'].upper()
