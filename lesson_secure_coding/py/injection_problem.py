@@ -37,5 +37,4 @@ def get_user(user_id):
 reset_database()
 setup_database()
 user = get_user("1 OR 1=1")
-
 print(user)
