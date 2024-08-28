@@ -3,9 +3,9 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 app.config['DEBUG'] = True
 users_db = {
-    'admin': {'password': 'supersecretpassword',
+    'admin': {'name': 'alice',
               'email': 'admin@example.com'},
-    'user': {'password': 'userpassword',
+    'user': {'name': 'bob',
              'email': 'user@example.com'}
 }
 
